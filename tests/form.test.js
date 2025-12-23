@@ -7,15 +7,7 @@ describe("Form", () => {
     jest.clearAllMocks();
   });
 
-  test("FAILS: expects onSubmit to be called automatically", () => {
-    const onSubmit = jest.fn();
-
-    render(<LoginForm onSubmit={onSubmit} />);
-
-    expect(onSubmit).toHaveBeenCalled();
-  });
-
-  test("WORKS: calls onSubmit with username and password on submit", () => {
+  test("calls onSubmit with onClick (since we don't have a form)", () => {
     const onSubmit = jest.fn();
 
     render(<LoginForm onSubmit={onSubmit} />);
@@ -34,7 +26,7 @@ describe("Form", () => {
     expect(onSubmit).toHaveBeenCalledWith("diego", "1234");
   });
 
-  test("WORKS: now it uses a form with onSubmit", () => {
+  test("calls onSubmit with the form onSubmit", () => {
     const onSubmit = jest.fn();
 
     render(<RealForm onSubmit={onSubmit} />);

@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import LoginForm from "../src/App";
 
-test.skip("renders Vite + React text", () => {
+test.skip("just checking the setup", () => {
   render(
     <LoginForm
       onSubmit={() => {
