@@ -9,7 +9,7 @@ export default function LoginForm({ onSubmit }) {
   }, [username, password, onSubmit]);
 
   return (
-    <div>
+    <form>
       <input
         id="username-input"
         data-testid="username-input"
@@ -29,11 +29,11 @@ export default function LoginForm({ onSubmit }) {
         id="login-button"
         data-testid="login-button"
         type="submit"
-        onClick={onClick} // this works in the 2th test-case
-        // onSubmit={onClick} // this one doesn't because it should be a formin the 2th test-case
+        // onClick={onClick} // this works in the 2th test-case
+        onSubmit={onClick} // this one doesn't because it should be a formin the 2th test-case
       >
         Submit
       </button>
-    </div>
+    </form>
   );
 }
